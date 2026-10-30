@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --color-lure-gold: #b58a52;
+  --color-lure-forest: #29392e;
+  --color-lure-paper: #fcfaf6;
+}
+
+:root { font-family: var(--font-sans); color: #302d27; background: var(--color-lure-paper); font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-optical-sizing: auto; scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; overflow-x: clip; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+::selection { color: white; background: #92703f; }
+
+@keyframes card-enter { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes dialog-enter { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes soft-snow { 0% { transform: translateY(-4px); opacity: .2; } 50% { opacity: .6; } 100% { transform: translateY(4px); opacity: .2; } }
+.animate-card-enter { animation: card-enter .42s both; }
+.animate-dialog-enter { animation: dialog-enter .2s ease-out both; }
+.animate-soft-snow { animation: soft-snow 3.5s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
